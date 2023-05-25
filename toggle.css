@@ -1,0 +1,109 @@
+body .switch {
+  margin: 12px auto;
+  min-width: 50px;
+}
+
+.switch {
+  height: 24px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+.switch input {
+  display: none;
+}
+
+.switch input + span {
+  padding-left: 50px;
+  min-height: 24px;
+  line-height: 24px;
+  display: block;
+  color: #5628ee;
+  position: relative;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.switch input + span:before, .switch input + span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 12px;
+}
+
+.switch input + span:before {
+  top: 0;
+  left: 0;
+  width: 42px;
+  height: 24px;
+  background: #e4ecfa;
+  transition: all 0.3s ease;
+}
+
+.switch input + span:after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: url("enFlag.png");
+  background-size: contain;
+  overflow: hidden;
+  top: 3px;
+  left: 3px;
+  box-shadow: 0 1px 3px rgba(18, 22, 33, 0.1);
+  transition: all 0.45s ease;
+}
+
+.switch input + span em {
+  background: #99a3ba;
+  position: absolute;
+  left: 8px;
+  bottom: 7px;
+  border-radius: 2px;
+  display: block;
+  z-index: 1;
+  transition: all 0.45s ease;
+}
+
+.switch input + span em:before {
+  width: 2px;
+  height: 2px;
+  border-radius: 1px;
+  background: #fff;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  margin: -1px 0 0 -1px;
+}
+
+.switch input + span em:after {
+  display: block;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: 1px solid #5628ee;
+  border-bottom: 0;
+  width: 6px;
+  height: 4px;
+  left: 1px;
+  bottom: 6px;
+  position: absolute;
+  z-index: 1;
+  transform-origin: 0 100%;
+  transition: all 0.45s ease;
+  transform: rotate(-35deg) translate(0, 1px);
+}
+
+.switch input:checked + span:before {
+  background: rgba(76, 125, 84, 0.15);
+  overflow: hidden;
+}
+
+.switch input:checked + span:after {
+  content: '';
+  background: #fff;
+  transform: translate(18px, 0);
+  background: url("mnFlag.png");
+  background-size: contain;
+  overflow: hidden;
+}
+
