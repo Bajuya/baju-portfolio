@@ -1,0 +1,55 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "name": "Font of the day:",
+      "title": "Aesthet Nova",
+      "imgUrl": "https://cdn.designerdailyreport.com/images/01ecc15b-af7d-41ac-8dcb-49facb30944a.png",
+      "url": "https://fonts.adobe.com/fonts/aesthet-nova?ref=designerdailyreport.com"
+    },
+    {
+      "id": 2,
+      "name": "Portfolio of the day:",
+      "title": "Joseph Zhang",
+      "imgUrl": "https://cdn.designerdailyreport.com/images/01ecc15b-af7d-41ac-8dcb-49facb30944a.png",
+      "url": "https://www.josephz.me/?ref=designerdailyreport.com"
+    },
+    {
+      "id": 3,
+      "name": "Palette of the day:",
+      "title": "Eschweiler",
+      "imgUrl": "https://cdn.designerdailyreport.com/images/01ecc15b-af7d-41ac-8dcb-49facb30944a.png",
+      "url": "https://www.behance.net/gallery/143468085/BACANAL?ref=designerdailyreport.com"
+    },
+    {
+      "name": "Phula Branding & Packaging",
+      "title": "Branding of the day:",
+      "imgUrl": "https://cdn.designerdailyreport.com/images/6dc91952-be61-41f0-a167-7ab1e3e29bfe.jpg",
+      "url": "https://www.behance.net/gallery/169210497/Phula-Branding-Packaging?ref=designerdailyreport.com",
+      "id": 4
+    }
+  ],
+  "freshLinks": [
+    {
+      "id": 1,
+      "name": "Raycast Pro",
+      "website": "raycast.com",
+      "imgUrl": "https://cdn.designerdailyreport.com/images/01ecc15b-af7d-41ac-8dcb-49facb30944a.png",
+      "url": "https://fonts.adobe.com/fonts/aesthet-nova?ref=designerdailyreport.com"
+    },
+    {
+      "id": 2,
+      "name": "Tailwind connect 2023",
+      "website": "connect.tailwind.css",
+      "imgUrl": "https://cdn.designerdailyreport.com/images/01ecc15b-af7d-41ac-8dcb-49facb30944a.png",
+      "url": "https://fonts.adobe.com/fonts/aesthet-nova?ref=designerdailyreport.com"
+    },
+    {
+      "name": "Жижиг",
+      "website": "motion.zajno.com",
+      "imgUrl": "https://cdn.designerdailyreport.com/images/c862b35b-dbf8-47ce-8a34-cf96cf7908e5.jpeg",
+      "url": "https://motion.zajno.com/?ref=designerdailyreport.com",
+      "id": 3
+    }
+  ]
+}

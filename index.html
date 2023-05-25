@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="Baju.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f6e2202752.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/css/uikit.min.css"
+    />
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+    <!-- cursor animation css -->
+    <link rel="stylesheet" href="styles/animation.css" />
+    <link rel="stylesheet" href="styles/toggle.css" />
+    <link rel="stylesheet" href="styles/card.css" />
+  </head>
+  <body>
+    <!-- Cursor animation  -->
+    <div class="cursor-container">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur" />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15"
+              result="goo"
+            />
+            <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+          </filter>
+        </defs>
+      </svg>
+      <div id="cursor" class="Cursor"></div>
+    </div>
+    <!-- Loading animation -->
+    <div id="loading" class="loading">
+      <div class="loading-text">
+        <span class="loading-text-words">L</span>
+        <span class="loading-text-words">O</span>
+        <span class="loading-text-words">A</span>
+        <span class="loading-text-words">D</span>
+        <span class="loading-text-words">I</span>
+        <span class="loading-text-words">N</span>
+        <span class="loading-text-words">G</span>
+      </div>
+    </div>
+    <section id="main-section">
+      <nav class="navbar fixed-top navbar-expand-lg bg-white">
+        <div class="container-fluid px-5">
+          <a href="index.html" style="text-decoration: none">
+            <h1 class="ner">Bajuyaa</h1>
+          </a>
+          <div
+            class="collapse navbar-collapse center"
+            id="navbarNavAltMarkup"
+          ></div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div id="links" class="d-flex gap-2" style="margin-right: 20px">
+              <a class="" aria-current="page" data-i18n="home" href="#">Home</a>
+              <a class="" data-i18n="foryou" href="#foryou">For You</a>
+              <a class="" data-i18n="products" href="#products">Projects</a>
+              <a class="" data-i18n="coolsites" href="#coolsites">Cool sites</a>
+              <a class="" data-i18n="aboutme" href="#aboutme">About me</a>
+              <a class="" data-i18n="contact" href="#contact">Contact me</a>
+            </div>
+            <div class="d-flex align-items-center" style="margin-right: 20px">
+              <label class="switch">
+                <input type="checkbox" id="i18n" />
+                <span>
+                  <em></em>
+                </span>
+              </label>
+              <p id="langName" style="width: 20px">EN</p>
+            </div>
+            <!-- hel solih -->
+            <!-- <select class="hel-solih" id="i18n" style="margin-right: 10px">
+              <option value="english">English</option>
+              <option value="mongolia">Mongolian</option>
+            </select> -->
+            <!-- Hamburger menu -->
+            <div class="hamburger">
+              <input type="checkbox" id="active" />
+              <label for="active" class="menu-btn"><span></span></label>
+              <label for="active" class="close"></label>
+              <div class="wrapper">
+                <ul
+                  uk-scrollspy="target: > li; cls: uk-animation-fade; delay: 200; repeat: true"
+                >
+                  <li>
+                    <a data-i18n="Illust" href="Illustrations.html"
+                      >Illustrations</a
+                    >
+                  </li>
+                  <li>
+                    <a data-i18n="Logo" href="branding.html">Logo, Branding</a>
+                  </li>
+                  <li>
+                    <a data-i18n="Posters" href="social.html"
+                      >Social Media Posters</a
+                    >
+                  </li>
+                  <li>
+                    <a data-i18n="UI" href="designs.html">UI Designs</a>
+                  </li>
+                  <li>
+                    <a data-i18n="AR" href="arFilter.html">AR Filters</a>
+                  </li>
+                  <li>
+                    <a data-i18n="Book" href="designs.html">Book Design</a>
+                  </li>
+                  <li>
+                    <a data-i18n="Photo" href="shooting.html">Photo Shooting</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section>
+        <section class="header-background row p-0">
+          <div
+            class="col-12 col-sm-3 order-1 order-sm-0 first p-0 ar-ungu-door"
+          ></div>
+          <div class="col-12 col-sm order-0 order-sm-1 p-0 ar-ungu-door">
+            <!-- <img src="Moon.png" alt="" style="width: 100%; height: 76%" /> -->
+          </div>
+        </section>
+        <section class="position-absolute top-0 w-100 h-50">
+          <section class="d-flex justify-content-between home-title"></section>
+          <section
+            class="d-flex h-100 pt-5 align-items-center justify-content-center top-section"
+          >
+            <img src="intro.jpeg" class="home-img" />
+            <section class="home-me-second">
+              <h1 class="home-me-title">Welcome to my world!🌞</h1>
+              <p class="home-me-para">
+                Welcome to my creative world where design and imagination
+                collide, showcasing my journey as a graphic designer and student
+                in pursuit of visual excellence.
+              </p>
+              <section>
+                <a
+                  download
+                  href="portofolio.pdf"
+                  class="btn btn-primary home-me-cv cv-btn send-btn"
+                >
+                  <i class="bi bi-send" style="margin-right: 5px"></i>
+                  Download CV
+                </a>
+                <button
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#videoPlayModal"
+                  class="btn btn-outline-primary home-me-cv send-btn"
+                  id="videoPlay"
+                >
+                  <i class="bi bi-play-circle-fill"></i>
+                  Play Video
+                </button>
+                <div
+                  class="modal fade"
+                  id="videoPlayModal"
+                  tabindex="-1"
+                  aria-labelledby="exampleModalLabel"
+                  aria-hidden="true"
+                >
+                  <div class="modal-dialog video-modal">
+                    <div
+                      class="modal-content"
+                      style="width: 90vw; margin-top: 30px"
+                    >
+                      <div class="modal-body" style="height: 80vh; width: 90vw">
+                        <video
+                          controls
+                          id="my-video"
+                          class="video-js"
+                          preload="auto"
+                          style="height: 100%; width: 100%"
+                        >
+                          <source src="intro.mp4" type="video/mp4" />
+                        </video>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+      <section id="foryou" class="container m-5">
+        <div class="row d-flex" style="height: 200px">
+          <div class="col-sm-6 manifest-main">
+            <div class="manifest-line"></div>
+            <h3 class="manifest" data-i18n="Manif"> Manifiesto </h3>
+          </div>
+          <div class="col-sm-6 d-flex align-items-center">
+            <h5 class="w-75 mani-des" data-i18n="Manif-des">
+              Being creative goes beyond a brushstroke. Being creative starts
+              from the soul. My mission is to channel your soulful creativity
+              into something beautiful.
+            </h5>
+          </div>
+        </div>
+      </section>
+      <section uk-slider class="m-5">
+        <section class="uk-slider-container">
+          <div
+            id="articleList"
+            uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300; repeat: true"
+            class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m"
+          ></div>
+        </section>
+        <div class="uk-position-relative">
+          <ul class="uk-slider-nav uk-dotnav uk-flex-center dot"></ul>
+        </div>
+      </section>
+      <section id="products" class="gol-heseg">
+        <section
+          class="container d-flex flex-column align-items-center gap-2 gap-sm-3"
+          style="width: 76%"
+        >
+          <div class="My-projects-title" data-i18n="Whatcan">
+            What can I do for you?
+          </div>
+          <div class="type-container">
+            <div class="My-projects" id="project-type" data-i18n="myProject">
+              My Projects
+            </div>
+          </div>
+          <div class="row bg gap-2 gap-sm-5" style="margin-top: 20px">
+            <div class="col position-relative pic1-con">
+              <img class="pic1" src="illu.png" alt="" />
+              <a href="Illustrations.html">
+                <div class="position-absolute top-0 z-2 w-100 h-100">
+                  <h3 class="pic1-text">Illustrations</h3>
+                </div>
+              </a>
+            </div>
+            <div class="col position-relative pic1-con">
+              <img class="pic1" src="TomYo.png" alt="" />
+              <a href="branding.html">
+                <div class="position-absolute top-0 z-2 w-100 h-100">
+                  <h3 class="pic1-text">Event Branding</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="row w-100 gap-2 gap-sm-5">
+            <div class="col position-relative pic1-con">
+              <img class="pic1" src="badamgerel.png" alt="" />
+              <a href="social.html">
+                <div class="position-absolute top-0 z-2 w-100 h-100">
+                  <h3 class="pic1-text">Social Media Posters</h3>
+                </div>
+              </a>
+            </div>
+            <div class="col position-relative pic1-con">
+              <img class="pic1" src="WHlogo.png" alt="" />
+              <a href="">
+                <div class="position-absolute top-0 z-2 w-100 h-100">
+                  <h3 class="pic1-text">Logos</h3>
+                </div>
+              </a>
+            </div>
+            <div class="col position-relative pic1-con">
+              <img class="pic1" src="AR.png" alt="" />
+              <a href="arFilter.html">
+                <div class="position-absolute top-0 z-2 w-100 h-100">
+                  <h3 class="pic1-text">AR Filters</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="row w-100 gap-2 gap-sm-5">
+            <div class="col position-relative pic1-con">
+              <img class="pic1" src="YgEnd.jpg" alt="" />
+              <a href="designs.html">
+                <div class="position-absolute top-0 z-2 w-100 h-100">
+                  <h3 class="pic1-text">Book Design, Illustration</h3>
+                </div>
+              </a>
+            </div>
+            <div class="col position-relative pic1-con">
+              <img class="pic1" src="ps.png" alt="" />
+              <a href="shooting.html">
+                <div class="position-absolute top-0 z-2 w-100 h-100">
+                  <h3 class="pic1-text">Photo Shooting</h3>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section id="coolsites" class="container-fluid p-5">
+        <div style="height: 60px"></div>
+        <h3 data-i18n="freshLinks" class="article-title-4">🔗 Fresh Links</h3>
+        <div
+          id="freshLinks"
+          class="row"
+          uk-grid
+          uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 300; repeat: true"
+        ></div>
+      </section>
+      <section id="aboutme" class="about-me-main">
+        <section class="container d-flex justify-content-center">
+          <div class="row aboutrow bg-white">
+            <div class="col-sm-6">
+              <img class="picme" src="baju.png" alt="" height="100%" />
+            </div>
+            <div class="col-sm-6">
+              <h5 class="aboutme" data-i18n="Aboutme">About me</h5>
+              <h4 class="about-me-desc" data-i18n="About-me-desc">
+                Hi, my name is Baju, I’m an Graphic Designer, becoming UI/UX
+                Designer. An eternally creative soul, it is my firm belief that
+                by connecting to our intuition we can weave together beautifully
+                crafted stories that can capture the imagination and
+                authentically engage the world.
+              </h4>
+              <!-- <div class="btn readmore-btn">
+              <h5 style="padding: 30px 30px; border-radius: 30px">Read More</h5>
+            </div> -->
+            </div>
+          </div>
+        </section>
+      </section>
+      <div id="contact">
+        <div style="height: 100px"></div>
+        <div class="container mt-5">
+          <div class="screen">
+            <div class="screen-header">
+              <div class="screen-header-left">
+                <div class="screen-header-button close"></div>
+                <div class="screen-header-button maximize"></div>
+                <div class="screen-header-button minimize"></div>
+              </div>
+              <div class="screen-header-right">
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+                <div class="screen-header-ellipsis"></div>
+              </div>
+            </div>
+            <div class="screen-body">
+              <div class="screen-body-item left">
+                <div class="contact-left col-sm-6 w-100">
+                  <div class="line"></div>
+                  <h1 data-i18n="contact" class="sub-title">Contact me</h1>
+                  <p class="content-item">99baju@gmail.com</p>
+                  <p class="content-item">+97688598874</p>
+                  <div class="process-scetion" style="margin-top: 40px">
+                    <div class="container">
+                      <div class="social-bar">
+                        <div class="social-icons mb-3 iconpad">
+                          <a
+                            href="https://www.facebook.com/bajuyaa"
+                            class="slider-nav-item"
+                            ><i class="fab fa-facebook"></i
+                          ></a>
+                          <a
+                            href="https://www.linkedin.com/in/baju-sersendemid-10516a248/"
+                            class="slider-nav-item"
+                            ><i class="bi bi-linkedin"></i
+                          ></a>
+                          <a
+                            href="https://www.instagram.com/bajuyaa/"
+                            class="slider-nav-item"
+                            ><i class="fab fa-instagram"></i
+                          ></a>
+                          <a
+                            href="https://www.youtube.com"
+                            target="_blank"
+                            class="slider-nav-item"
+                            ><i class="bi bi-youtube"></i
+                          ></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="screen-body-item">
+                <form>
+                  <section class="row gap-4 input-main-con">
+                    <section class="col-sm-5 input-con">
+                      <label for="">Name</label>
+                      <input
+                        type="text"
+                        name="Name"
+                        placeholder="Your name"
+                        required
+                        class="input-style"
+                      />
+                    </section>
+                    <section class="col-sm-5 input-con">
+                      <label for="">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        required
+                        class="input-style"
+                      />
+                    </section>
+                  </section>
+                  <section class="input-con">
+                    <label for="">Message</label>
+                    <textarea
+                      name="Message"
+                      rows="6"
+                      placeholder="Your Message"
+                      class="input-style"
+                      style="width: 89%"
+                    ></textarea>
+                  </section>
+                  <section
+                    style="width: 89%"
+                    class="d-flex justify-content-center mt-2"
+                  >
+                    <button class="btn btn-primary send-btn" type="submit">
+                      <i class="bi bi-send" style="margin-right: 5px"></i>
+                      Submit
+                    </button>
+                  </section>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="height: 100px"></div>
+      </div>
+    </section>
+    <!-- bootstrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- first cursor animation js -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="cursor.js"></script>
+    <!-- end cursor animation js -->
+
+    <script src="app.js"></script>
+    <script src="i18n.js"></script>
+    <script src="scroll.js"></script>
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.17/dist/js/uikit-icons.min.js"></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"
+      integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var typing = new Typed(".My-projects", {
+        strings: [
+          "",
+          "Illustrations",
+          "Event Branding",
+          "Social Media Posters",
+          "Logos",
+          "AR Filters",
+          "Book Design, Illustration",
+          "Photo Shooting",
+        ],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true,
+      });
+    </script>
+    <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+  </body>
+</html>

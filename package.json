@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-baju",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bajuya/Portfolio-Baju.git"
+  },
+  "dependencies": {
+    "json-server": "^0.17.0"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bajuya/Portfolio-Baju/issues"
+  },
+  "homepage": "https://github.com/Bajuya/Portfolio-Baju#readme"
+}
